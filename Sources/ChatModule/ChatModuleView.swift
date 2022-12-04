@@ -9,10 +9,15 @@ import SwiftUI
 
 public struct ChatModuleView: View {
     
+    @Environment(\.presentationMode) private var presentationMode
+    
     public init() {}
     
     public var body: some View {
         Text("Hello, World!")
+            .onTapGesture {
+                presentationMode.wrappedValue.dismiss()
+            }
     }
 }
 
