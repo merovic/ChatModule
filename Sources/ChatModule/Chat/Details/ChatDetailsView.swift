@@ -80,37 +80,37 @@ struct ChatDetailsView: View {
                 .frame(width: .infinity, height: 50, alignment: .center)
                 .padding([.leading, .trailing], 16)
             }
-            .popup(isPresented: $showingPopup) { // 3
-                ZStack { // 4
-                    Rectangle()
-                        .frame(width: 150, height: 200, alignment: .center)
-                        .foregroundColor(Color.white)
-                        .cornerRadius(8)
-                        .shadow(radius: 5)
-                    VStack(alignment: .trailing) {
-                        HStack {
-                            Text("Send Money")
-                                //.font(.SFProFont(size: 12, weight: .regular))
-                                .foregroundColor(Color("PrimaryColor"))
-                            Image("CTA")
-                        }
-                        HStack {
-                            Text("Collect Money")
-                                //.font(.SFProFont(size: 12, weight: .regular))
-                                .foregroundColor(Color("PrimaryColor"))
-                            Image("CTA-1")
-                        }
-                        HStack {
-                            Text("Upload Image")
-                                //.font(.SFProFont(size: 12, weight: .regular))
-                                .foregroundColor(Color("PrimaryColor"))
-                            Image("CTA-2")
-                        }
-                    }
-                }
-                .padding(.bottom, UIScreen.main.bounds.height/2.5)
-                .padding(.leading, UIScreen.main.bounds.width/3.5)
-            }
+//            .popup(isPresented: $showingPopup) { // 3
+//                ZStack { // 4
+//                    Rectangle()
+//                        .frame(width: 150, height: 200, alignment: .center)
+//                        .foregroundColor(Color.white)
+//                        .cornerRadius(8)
+//                        .shadow(radius: 5)
+//                    VStack(alignment: .trailing) {
+//                        HStack {
+//                            Text("Send Money")
+//                                //.font(.SFProFont(size: 12, weight: .regular))
+//                                .foregroundColor(Color("PrimaryColor"))
+//                            Image("CTA")
+//                        }
+//                        HStack {
+//                            Text("Collect Money")
+//                                //.font(.SFProFont(size: 12, weight: .regular))
+//                                .foregroundColor(Color("PrimaryColor"))
+//                            Image("CTA-1")
+//                        }
+//                        HStack {
+//                            Text("Upload Image")
+//                                //.font(.SFProFont(size: 12, weight: .regular))
+//                                .foregroundColor(Color("PrimaryColor"))
+//                            Image("CTA-2")
+//                        }
+//                    }
+//                }
+//                .padding(.bottom, UIScreen.main.bounds.height/2.5)
+//                .padding(.leading, UIScreen.main.bounds.width/3.5)
+//            }
             .navigationBarTitle("", displayMode: .inline)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(
