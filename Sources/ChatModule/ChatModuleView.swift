@@ -9,19 +9,20 @@ import SwiftUI
 
 public struct ChatModuleView: View {
     
-    public init() {}
+    @Binding
+    var isViewVisible: Bool
+    
+    public init(isViewVisible: Binding<Bool>) {
+        _isViewVisible = isViewVisible
+    }
     
     @State var isPresenting = false
-    
-    // MARK: Enviroment
-    @Environment(\.presentationMode)
-    private var presentationMode
     
     public var body: some View {
         NavigationView {
             VStack {
                 Text("Back").onTapGesture {
-                    self.presentationMode.wrappedValue.dismiss()
+                    isPresenting = false
                 }
                 Button("Navigate") {
                     isPresenting = true
@@ -31,10 +32,4 @@ public struct ChatModuleView: View {
         }
     }
     
-}
-
-public struct ChatModuleView_Previews: PreviewProvider {
-    public static var previews: some View {
-        ChatModuleView()
-    }
 }
