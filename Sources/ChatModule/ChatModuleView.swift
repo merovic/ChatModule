@@ -9,9 +9,9 @@ import SwiftUI
 
 public struct ChatModuleView: View {
     
-    @Environment(\.presentationMode) private var presentationMode
-    
     public init() {}
+    
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     
     public var body: some View {
         Text("Hello, World!")
