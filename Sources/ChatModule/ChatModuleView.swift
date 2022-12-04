@@ -11,14 +11,19 @@ public struct ChatModuleView: View {
     
     public init() {}
     
-    @Environment(\.presentationMode) public var presentationMode: Binding<PresentationMode>
+    @State var isPresenting = false
     
     public var body: some View {
-        Text("Hello, World!")
-            .onTapGesture {
-                presentationMode.wrappedValue.dismiss()
+        NavigationView {
+            VStack {
+                Button("Navigate") {
+                    isPresenting = true
+                }
+                NavigationLink(destination: SampleView(), isActive: $isPresenting) { EmptyView() }
             }
+        }
     }
+    
 }
 
 public struct ChatModuleView_Previews: PreviewProvider {
