@@ -13,9 +13,16 @@ public struct ChatModuleView: View {
     
     @State var isPresenting = false
     
+    // MARK: Enviroment
+    @Environment(\.presentationMode)
+    private var presentationMode
+    
     public var body: some View {
         NavigationView {
             VStack {
+                Text("Back").onTapGesture {
+                    self.presentationMode.wrappedValue.dismiss()
+                }
                 Button("Navigate") {
                     isPresenting = true
                 }
