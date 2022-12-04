@@ -11,7 +11,7 @@ public struct ChatModuleView: View {
     
     public init() {}
     
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @Environment(\.presentationMode) public var presentationMode: Binding<PresentationMode>
     
     public var body: some View {
         Text("Hello, World!")
