@@ -22,7 +22,7 @@ public struct ChatModuleView: View {
         NavigationView {
             VStack {
                 Text("Back").onTapGesture {
-                    isPresenting = false
+                    isViewVisible = false
                 }
                 Button("Navigate") {
                     isPresenting = true
