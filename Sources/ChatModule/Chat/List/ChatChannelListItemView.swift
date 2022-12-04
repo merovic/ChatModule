@@ -39,7 +39,7 @@ struct ChatChannelListItemView: View {
                 HStack {
                     Text(name)
                         .lineLimit(1)
-                        .font(.SFProFont(size: 16, weight: .medium))
+                        //.font(.SFProFont(size: 16, weight: .medium))
                         .foregroundColor(.primary)
                     Spacer()
                     ZStack {
@@ -47,19 +47,19 @@ struct ChatChannelListItemView: View {
                             .frame(width: 20, height: 20)
                             .clipShape(Circle())
                         Text("\(unreadCount)")
-                            .font(.SFProFont(size: 11, weight: .medium))
+                            //.font(.SFProFont(size: 11, weight: .medium))
                             .foregroundColor(.white)
                     }
                 }
                 HStack {
                     Text(lastMsg)
                         .lineLimit(2)
-                        .font(.SFProFont(size: 14, weight: .regular))
+                        //.font(.SFProFont(size: 14, weight: .regular))
                         .foregroundColor(.secondary)
                     Spacer()
                     Text(lastMsgDate)
                         .lineLimit(1)
-                        .font(.SFProFont(size: 12, weight: .regular))
+                        //.font(.SFProFont(size: 12, weight: .regular))
                         .foregroundColor(.secondary)
                 }
             }
